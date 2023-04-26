@@ -1,0 +1,235 @@
+.footer {
+  position: relative;
+  background-color: #eaeaea;
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #f6f6f6;
+    z-index: 1;
+  }
+  &__grid {
+    display: grid;
+    grid-template-areas: "logo nav" "social nav" "copy copy";
+    grid-template-columns: 1fr 1.92fr;
+  }
+  &__nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr 1fr;
+    padding-top: 24px;
+  }
+  &__logo {
+    grid-area: logo;
+    width: 187px;
+    height: 80px;
+    padding-top: 24px;
+    padding-bottom: 29px;
+  }
+  &__social {
+    &-list {
+      display: flex;
+      grid-area: social;
+      padding-bottom: 25px;
+    }
+    &-item {
+      &:not(:last-child) {
+        margin-right: 13px;
+      }
+    }
+    &-svg-container {
+      width: 30px;
+      height: 30px;
+    }
+    &-svg-use {
+      fill: #999999;
+      transition: fill 0.15s ease-in-out;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      background-position: center;
+      transition-property: background-color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.15s;
+      &:focus {
+        outline: none;
+        background-color: #c998fb;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 14px;
+    line-height: 19px;
+    color: #999999;
+    grid-area: copy;
+    justify-self: center;
+    z-index: 3;
+  }
+}
+
+.footer-nav {
+  &__container {
+    &--contact {
+      padding-left: 11px;
+    }
+    &--cooperating {
+      justify-self: end;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 8px;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #999999;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer-nav__item a {
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+  &:hover {
+    color: #a65cf0;
+  }
+  &:active {
+    color: #7033ac;
+  }
+  &:focus {
+    outline: none;
+    background-color: #ebd1ff;
+    color: #7033ac;
+  }
+}
+
+.footer__social-link:hover .footer__social-svg-use {
+  fill: #a65cf0;
+}
+
+.footer__social-link:active .footer__social-svg-use {
+  fill: #7033ac;
+}
+
+.footer__social-link:focus .footer__social-svg-use {
+  fill: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &::before {
+      bottom: -6px;
+    }
+    &__grid {
+      grid-template-columns: 1fr 3.4fr;
+    }
+    &__nav {
+      padding-top: 27px;
+      grid-template-columns: 1fr 1.6fr 1.3fr 1fr;
+    }
+  }
+  .footer-nav {
+    &__container {
+      &--services {
+        padding-left: 11px;
+      }
+      &--contact {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 939px) {
+  .footer {
+    &::before {
+      top: 190px;
+    }
+    &__grid {
+      grid-template-areas: "logo  social " "nav nav" "copy copy ";
+      grid-template-columns: 1fr 1fr;
+    }
+    &__social {
+      &-list {
+        padding-bottom: 21px;
+        padding-top: 25px;
+        justify-self: end;
+      }
+    }
+    &__logo {
+      // padding: 0;
+    }
+    &__copyright {
+      padding-top: 25px;
+    }
+    &__nav {
+      padding-top: 0;
+      grid-template-columns: 1fr 1.7fr 1.7fr 1fr;
+    }
+  }
+  .footer-nav {
+    &__container {
+      &--contact {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 696px) {
+  .footer {
+    &::before {
+      top: 353px;
+    }
+    &__grid {
+      grid-template-areas: "logo" "social" "nav" "copy";
+      grid-template-columns: 1fr;
+    }
+    &__logo {
+      height: 80px;
+      justify-self: center;
+    }
+    &__social {
+      &-list {
+        padding-bottom: 23px;
+        padding-top: 0;
+        justify-self: center;
+      }
+    }
+    &__nav {
+      grid-template-columns: 1fr 1fr;
+      gap: 26px 0;
+    }
+  }
+  .footer-nav {
+    &__container {
+      &--services {
+        padding-left: 6px;
+      }
+      &--contact {
+        padding-left: 0;
+      }
+      &--cooperating {
+        padding-left: 6px;
+        justify-self: start;
+      }
+    }
+  }
+}

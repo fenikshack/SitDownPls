@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сотрудничество</title>
+  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/PlayfairDisplay.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/OpenSansBold.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link type="image" rel="shortcut icon" href="image/main/fav.svg">
+  <link rel="stylesheet" href="css/plugins/choices.min.css" />
+  <link rel="stylesheet" href="css/cooperation.css" />
+  <script defer src="js/plug/choices.min.js"></script>
+  <script defer src="js/cooperation.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__grid">
+        <div class="region">
+          <p class="region__discribe p-reset">Ваш регион:</p>
+          <div class="region__container">
+            <select name="region" class="region__select">
+              <option value="moscow">Москва</option>
+              <option value="ufa">Уфа</option>
+              <option value="perm">Саратов</option>
+              <option value="samara">Самара</option>
+              <option value="omsk">Пенза</option>
+            </select>
+          </div>
+        </div>
+        <div class="header__tel">
+          <a class="header__tel-link" href="tel:74958854547" aria-label="Телефон интернет-магазина">
+            <svg class="header__tel-svg-container">
+              <use class="header__tel-svg-use" xlink:href="svg/sprite.svg#phone"></use>
+            </svg>
+            +7 (495) 885-45-47
+          </a>
+        </div>
+        <ul class="addmenu list-reset" aria-label="Список дополнительной навигации">
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">О компании</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Гарантия и возврат</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Дизайн-решение</a>
+          </li>
+        </ul>
+        <a href="index.html" class="header__logo">
+          <img src="image/main/Logo.jpg" alt="SitDownPls - логотип" />
+        </a>
+        <nav class="header__nav">
+          <button class="header__nav-btn button-default" aria-label="Кнопка закрытия меню для мобильных устройств">
+            <svg class="header__nav-btn-svg-container">
+              <use class="header__nav-btn-svg-use" xlink:href="svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <ul class="header__nav-list list-reset">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Магазины</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Шоу-рум</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Дисконт</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <form class="search">
+          <div class="search__container">
+            <input class="search__input" type="search" placeholder="Я хочу купить..." />
+            <svg class="search__input-svg">
+              <use class="search__input-svg-use" xlink:href="svg/sprite.svg#search"></use>
+            </svg>
+            <button type="submit" class="search__btn button-default" aria-label="Кнопка отправки поиского запроса">
+              <svg class="search__btn-svg-container">
+                <use class="search__btn-svg-use" xlink:href="svg/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <div class="category">
+              <select name="category" class="category__select">
+                <option>Категория</option>
+                <option value="sofas">Диваны</option>
+                <option value="armchairs">Кресла</option>
+                <option value="poufs">Пуфы</option>
+                <option value="beds">Кровати</option>
+                <option value="curbstones">Тумбы</option>
+                <option value="dressers">Комоды</option>
+                <option value="chairs">Стулья</option>
+                <option value="tables">Столы</option>
+                <option value="accessories">Аксессуары</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <button class="header__account-btn button-default" aria-label="Кнопка личного кабинета">
+          <svg class="header__account-btn-svg">
+            <use class="header__account-btn-svg-use" xlink:href="svg/sprite.svg#person"></use>
+          </svg>
+        </button>
+        <button class="header__basket-btn button-default" aria-label="Кнопка выбранных товаров">
+          <svg class="header__basket-btn-svg">
+            <use class="header__basket-btn-svg-use" xlink:href="svg/sprite.svg#basket"></use>
+          </svg>
+          0
+        </button>
+        <button class="header__burger button-default" aria-label="Кнопка раскрытия меня на мобильных устройствах">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container hierarchy hierarchy--padding cooperation__hierarchy">
+      <ul class="hierarchy__list list-reset">
+        <li class="hierarchy__item">
+          <a class="hierarchy__link" href="index.html">Главная </a>
+        </li>
+        <li class="hierarchy__item">Сотрудничество</li>
+      </ul>
+    </div>
+    <section class="information">
+      <div class="container">
+        <div class="information__container">
+          <h2 class="h-reset">Сотрудничество</h2>
+          <div>
+            <h3 class="h-reset">Поставщикам</h3>
+            <p class="p-reset">
+              При планировании обстановки торгового помещения важно обустроить
+              его с комфортом для покупателей: грамотно зонировать, обеспечить
+              эффективную демонстрацию и хранение товаров в зале. Если вам
+              необходимо комплексное оснащение, организация зоны отдыха или
+              отдельные предметы меблировки для поддержания эффективной
+              торговой деятельности, мы поможем выбрать продукцию с учетом
+              нагрузки от поступающего трафика.
+            </p>
+          </div>
+          <div>
+            <h3 class="h-reset">Что вы получаете?</h3>
+            <ul class="list-reset">
+              <li>
+                Мы ценим идеи и вдохновение и&nbsp;предлагаем сотрудничество
+                талантливым дизайнерам и архитекторам. Выпускаемая нами
+                продукция гармонично дополнит любой современный проект.
+              </li>
+              <li>
+                Комплексное решение для красивого и функционального
+                обустройства любых пространств.
+              </li>
+              <li>
+                В ассортименте представлены все товарные группы для того,
+                чтобы воссоздать обстановку в&nbsp;помещениях&nbsp;разных
+                типов: кабинетах, смешанных пространствах, Open Space,
+                гостевых и переговорных комнатах.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="h-reset">Ваши преимущества от сотрудничества</h3>
+            <span>Возможность 1:</span>
+            <p class="p-reset">
+              Создавайте незабываемые впечатления. Красиво меблированная
+              фотостудия не оставит клиентов равнодушными, а созданная
+              интерьером атмосфера будет надолго запечатлена на их снимках.
+              Стильная и разноплановая обстановка творческого пространства –
+              ключевая составляющая его успешной деятельности. Позаботьтесь о
+              людях в кадре, а мы поможем правильно выбрать мебель.
+            </p>
+            <span>Возможность 2:</span>
+            <p class="p-reset">
+              Мы предлагаем застройщикам, работающим на территории РФ, участие
+              наших специалистов от этапа проектирования обстановки квартир и
+              подбора комплексных интерьерных решений до оптовых поставок
+              мебели. Поможем организовать демонстрационный зал с образцами
+              изделий и материалов на площади нового здания, чтобы покупатель
+              заблаговременно подобрал тот вариант меблировки, который
+              удовлетворит даже самые взыскательные ожидания.
+            </p>
+          </div>
+          <div>
+            <h3 class="h-reset">Гарантии</h3>
+            <ol class="list-reset">
+              <li
+                class="information__discribe-block information__discribe-block--after information__discribe-block--after-1">
+                При приемке товара Покупатель должен внимательно проверить его
+                количество, качество и ассортимент на соответствие
+                сопроводительным документам и заказу. После подписания
+                товарного чека Покупатель утрачивает право предъявления
+                претензий, которые можно выявить при приемке товара.
+              </li>
+              <li
+                class="information__discribe-block information__discribe-block--after information__discribe-block--after-2">
+                На товары, сборка которых производилась покупателем
+                самостоятельно (не специалистами Продавца), гарантийные
+                обязательства Продавца не распространяются. Также гарантия не
+                распространяется на повреждения товара, полученные в ходе
+                самостоятельной доставки и подъема товара. Покупатель не
+                вправе отказаться от товара надлежащего качества, имеющего
+                индивидуально-определенные свойства, т.е. если товар может
+                быть использован исключительно приобретающим его потребителем.
+              </li>
+              <li
+                class="information__discribe-block information__discribe-block--after information__discribe-block--after-3">
+                Возврат или обмен товара возможен при условии, что сохранена
+                упаковка, товарный вид и потребительские свойства товара, а
+                также товарный и кассовый чеки. В этом случае мы гарантируем
+                вам возврат полной стоимости товара (за вычетом стоимости
+                доставки). В случае отказа от товара при доставке, клиент
+                оплачивает услуги доставки.
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="h-reset">
+              Срок гарантии на нашу мебель составляет
+              от&nbsp;18&nbsp;до&nbsp;60 месяцев
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <img class="footer__logo" src="image/main/footer.svg" alt="SitDownPls -
+          логотип " />
+        <ul class="footer__social-list list-reset">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="Ссылка на facebook магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#fb "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="ССылка на instagram магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#vk "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="ССылка на группу в ВКонтакте магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#instagram "></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <nav class="footer__nav">
+          <div class="footer-nav__container footer-nav__container--about">
+            <h3 class="footer-nav__title h-reset">О нас</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">О компании</a></li>
+              <li class="footer-nav__item"><a href="#">Блог</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--services">
+            <h3 class="footer-nav__title h-reset">Услуги</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">Доставка</a></li>
+              <li class="footer-nav__item">
+                <a href="#">Рассрочка и кредит</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#">Сборка и установка</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--contact">
+            <h3 class="footer-nav__title h-reset">Связь с нами</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">Обратная связь</a></li>
+              <li class="footer-nav__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--cooperating">
+            <h3 class="footer-nav__title h-reset">Сотрудничество</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item">
+                <a href="cooperation.html">Поставщикам</a>
+              </li>
+              <li class="footer-nav__item"><a href="#">Оптовикам</a></li>
+              <li class="footer-nav__item"><a href="#">Карьера</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer__copyright">SDP® 2011-2023</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

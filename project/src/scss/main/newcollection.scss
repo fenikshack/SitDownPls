@@ -1,0 +1,90 @@
+.collection {
+  padding: 155px 0 152px 0;
+  background-image: url("/image/main/Rectanglehd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -5px;
+  &__title {
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 400;
+    color: white;
+    max-width: 508px;
+    margin-bottom: 48px;
+    &--special {
+      font: 900 60px/72px Play;
+      color: #d5b986;
+    }
+  }
+  &__btn {
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    padding: 20px 30px;
+    background-color: #a65cf0;
+    border-radius: 10px;
+    border: 2px solid #a65cf0;
+    transition: background-color 0.15s ease-in-out;
+    &:hover {
+      background-color: #c998fb;
+    }
+    &:active {
+      background-color: #7033ac;
+    }
+    &:focus {
+      background-color: #c998fb;
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .collection {
+    background-image: url("/image/main/Rectangle1024.jpg");
+  }
+}
+
+@media (max-width: 768px) {
+  .collection {
+    padding: 155px 0 147px 0;
+    background-image: url("/image/main/Rectangle768.jpg");
+    &__container {
+      padding: 0 38px;
+    }
+    &__title {
+      margin-bottom: 52px;
+    }
+    &__btn {
+      padding: 20px 29px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .collection {
+    position: relative;
+    background-image: url("/image/main/Rectangle320.jpg");
+    padding: 35px 0 113px 0;
+    &__container {
+      padding: 0 13px;
+    }
+    &__title {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 18px;
+      max-width: 187px;
+      &--special {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+    &__btn {
+      position: absolute;
+      bottom: -92px;
+      left: 50%;
+      padding: 20px 84px;
+      transform: translate(-50%, 0);
+    }
+  }
+}

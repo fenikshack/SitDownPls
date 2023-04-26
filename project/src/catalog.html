@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог мебели</title>
+  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/PlayfairDisplay.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/OpenSansBold.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link type="image" rel="shortcut icon" href="image/main/fav.svg">
+  <link rel="stylesheet" href="css/plugins/choices.min.css" />
+  <link rel="stylesheet" href="css/plugins/nouislider.min.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+  <script defer src="js/plug/choices.min.js"></script>
+  <script defer src="js/plug/nouislider.min.js"></script>
+  <script defer src="js/catalog.js"></script>
+</head>
+
+<body>
+  <h1 class="visually-hidden h-reset">
+    SitDownPls - интернет-магазин мебели
+  </h1>
+  <header class="header">
+    <div class="container">
+      <div class="header__grid">
+        <div class="region">
+          <p class="region__discribe p-reset">Ваш регион:</p>
+          <div class="region__container">
+            <select name="region" class="region__select">
+              <option value="moscow">Москва</option>
+              <option value="ufa">Уфа</option>
+              <option value="perm">Саратов</option>
+              <option value="samara">Самара</option>
+              <option value="omsk">Пенза</option>
+            </select>
+          </div>
+        </div>
+        <div class="header__tel">
+          <a class="header__tel-link" href="tel:74958854547" aria-label="Телефон интернет-магазина">
+            <svg class="header__tel-svg-container">
+              <use class="header__tel-svg-use" xlink:href="svg/sprite.svg#phone"></use>
+            </svg>
+            +7 (495) 885-45-47
+          </a>
+        </div>
+        <ul class="addmenu list-reset" aria-label="Список дополнительной навигации">
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">О компании</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Гарантия и возврат</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="addmenu__item">
+            <a class="addmenu__link" href="#">Дизайн-решение</a>
+          </li>
+        </ul>
+        <a href="index.html" class="header__logo">
+          <img src="image/main/Logo.jpg" alt="SitDownPls - логотип" />
+        </a>
+        <nav class="header__nav">
+          <button class="header__nav-btn button-default" aria-label="Кнопка закрытия меню для мобильных устройств">
+            <svg class="header__nav-btn-svg-container">
+              <use class="header__nav-btn-svg-use" xlink:href="svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <ul class="header__nav-list list-reset">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Магазины</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Шоу-рум</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Дисконт</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <form class="search">
+          <div class="search__container">
+            <input class="search__input" type="search" placeholder="Я хочу купить..." />
+            <svg class="search__input-svg">
+              <use class="search__input-svg-use" xlink:href="svg/sprite.svg#search"></use>
+            </svg>
+            <button type="submit" class="search__btn button-default" aria-label="Кнопка отправки поиского запроса">
+              <svg class="search__btn-svg-container">
+                <use class="search__btn-svg-use" xlink:href="svg/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <div class="category">
+              <select name="category" class="category__select">
+                <option>Категория</option>
+                <option value="sofas">Диваны</option>
+                <option value="armchairs">Кресла</option>
+                <option value="poufs">Пуфы</option>
+                <option value="beds">Кровати</option>
+                <option value="curbstones">Тумбы</option>
+                <option value="dressers">Комоды</option>
+                <option value="chairs">Стулья</option>
+                <option value="tables">Столы</option>
+                <option value="accessories">Аксессуары</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <button class="header__account-btn button-default" aria-label="Кнопка личного кабинета">
+          <svg class="header__account-btn-svg">
+            <use class="header__account-btn-svg-use" xlink:href="svg/sprite.svg#person"></use>
+          </svg>
+        </button>
+        <button class="header__basket-btn button-default" aria-label="Кнопка выбранных товаров">
+          <svg class="header__basket-btn-svg">
+            <use class="header__basket-btn-svg-use" xlink:href="svg/sprite.svg#basket"></use>
+          </svg>
+          0
+        </button>
+        <button class="header__burger button-default" aria-label="Кнопка раскрытия меня на мобильных устройствах">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container hierarchy">
+      <ul class="hierarchy__list list-reset">
+        <li class="hierarchy__item">
+          <a class="hierarchy__link" href="index.html">Главная </a>
+        </li>
+        <li class="hierarchy__item">
+          <a class="hierarchy__link" href="catalog.html"> Каталог </a>
+        </li>
+        <li class="hierarchy__item">
+          <a class="hierarchy__link" href="#"> Диваны </a>
+        </li>
+        <li class="hierarchy__item">Прямые диваны</li>
+      </ul>
+    </div>
+    <section>
+      <div class="container catalog-page">
+        <form class="filter">
+          <h2 class="filter__title filter__title--desktop h-reset">
+            Фильтровать по:
+          </h2>
+          <h2 class="filter__title filter__title--laptop h-reset">
+            Фильтры:
+          </h2>
+          <div class="filter__drop-list filter__drop-list--category">
+            <h3 class="filter__discribe p-reset">Категория</h3>
+            <button type="button" class="filter__checkbox-btn button-default"
+              aria-label="Кнопка открытия выпадающего меню">
+              Категория
+            </button>
+            <div class="filter__checkbox-container">
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" checked type="checkbox" />
+                <span></span>
+                Диваны
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Кресла
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Пуфы
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Кровати
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Тумбы
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Комоды
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Стулья
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Столы
+              </label>
+              <label class="filter__label" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Аксессуары
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 1
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 2
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 3
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 4
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 5
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 6
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 7
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 8
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 9
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 10
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 11
+              </label>
+              <label class="filter__label filter__label-hide" data-label="category">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Доп. Категория 12
+              </label>
+            </div>
+          </div>
+          <div class="filter__drop-list filter__drop-list--price">
+            <h3 class="filter__discribe filter__discribe--margin p-reset">
+              Цена
+            </h3>
+            <button type="button" class="filter__checkbox-btn button-default"
+              aria-label="Кнопка открытия выпадающего меню">
+              Цена
+            </button>
+            <div class="filter__checkbox-container filter__checkbox-container--input">
+              <label class="filter__input-label">
+                от
+                <input id="price-min" class="filter__input-field" type="number" />
+              </label>
+              <label class="filter__input-label">
+                до
+                <input id="price-max" class="filter__input-field" type="number" />
+              </label>
+            </div>
+            <div id="range" class="filter__range"></div>
+          </div>
+          <div class="filter__drop-list filter__drop-list--discount">
+            <h3 class="filter__discribe h-reset">Скидка</h3>
+            <button type="button" class="filter__checkbox-btn button-default"
+              aria-label="Кнопка открытия выпадающего меню">
+              Скидка
+            </button>
+            <div class="filter__checkbox-container">
+              <label class="filter__label filter__label--desktop" data-label="discount">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Более 5 000
+              </label>
+              <label class="filter__label filter__label--desktop" data-label="discount">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Менее 5 000
+              </label>
+              <label class="filter__label filter__label--mobile" data-label="discount">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                &gt; 5 000
+              </label>
+              <label class="filter__label filter__label--mobile" data-label="discount">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                &lt; 5 000
+              </label>
+              <label class="filter__label" data-label="discount">
+                <input class="filter__checkbox" checked type="checkbox" />
+                <span></span>
+                Не важно
+              </label>
+            </div>
+          </div>
+          <div class="filter__drop-list filter__drop-list--color">
+            <h3 class="filter__discribe filter__discribe--padding h-reset">
+              Цвет
+            </h3>
+            <button type="button" class="filter__checkbox-btn button-default"
+              aria-label="Кнопка открытия выпадающего меню">
+              Цвет
+            </button>
+            <div class="filter__checkbox-container">
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Коричневый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Черный
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Бежевый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Серый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Белый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Синий
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" checked type="checkbox" />
+                <span></span>
+                Оранжевый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Желтый
+              </label>
+              <label class="filter__label" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Зеленый
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Абрикосовый
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Аквамариновый
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Арлекин
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Бирюзовый
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Бордовый
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Византийский
+              </label>
+              <label class="filter__label filter__label-hide" data-label="color">
+                <input class="filter__checkbox" type="checkbox" />
+                <span></span>
+                Грушевый
+              </label>
+            </div>
+          </div>
+          <div class="filter__promo">
+            <h2 class="filter__promo-title h-reset">Оксфорд 1950</h2>
+            <p class="filter__promo-discribe p-reset">
+              Новая коллекция изысканных кресел
+            </p>
+            <a class="filter__promo-link" href="#">В каталог
+              <div class="filter__promo-icon">
+                <svg class="filter__promo__svg-container">
+                  <use class="filter__promo__svg-use" xlink:href="svg/sprite.svg#arrow-right "></use>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </form>
+        <div class="catalog-page__title-container">
+          <h2 class="catalog-page__title h-reset">Каталог</h2>
+        </div>
+        <div class="content">
+          <div class="content__grid">
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">5,0</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/r94320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofar94.png" alt="Изображение дивана “R-94”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван кожаный “R-94”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">94 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">4,9</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/t75320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofat75.png" alt="Изображение дивана “T-75”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title catalog-card__title--max-width">
+                    Диван апартековый “T-75”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">69 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">4,8</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/d31320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofad31.png" alt="Изображение дивана “D-31”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="product.html" class="catalog-card__title">
+                    Диван тканевый “D-31”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">28 490 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">4,8</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/y68320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofay68.png" alt="Изображение дивана “Y-68”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван велюровый “Y-68”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">22 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">4,8</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/w95320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofaw95.png" alt="Изображение дивана “W-95”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван из шинила “W-95”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">22 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="first" class="catalog-card">
+              <div class="catalog-card__rating">4,8</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/g41320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofag41.png" alt="Изображение дивана “G-41”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван флоковый “G-41”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">17 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="second" class="catalog-card catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,8</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/v43320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofav43.png" alt="Изображение дивана “V-43”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван шиниловый “V-43”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">19 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="second" class="catalog-card catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,7</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/s99320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofas99.png" alt="Изображение дивана “S-99”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван велюровый “S-99”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">19 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="first" data-tab-mobile="second" class="catalog-card catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,7</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/f85320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofaf85.png" alt="Изображение дивана “F-85”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван из кожзама “F-85”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">26 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="second"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,6</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/h64320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofah64.png" alt="Изображение дивана “H-64”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван флоковый “H-64”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">25 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="second"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,6</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/h58320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofah58.png" alt="Изображение дивана “H-58”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван флоковый “H-58”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">23 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="second"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,6</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/r43320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofar43.png" alt="Изображение дивана “R-43”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван из кожзама “R-43”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">33 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,6</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/c42320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofac42.png
+                      " alt="Изображение дивана “С-42”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван из шинила “С-42”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">18 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,6</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/u58320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofau58.png" alt="Изображение дивана “U-58”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван велюровый “U-58”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">21 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,5</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/f41320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofaf41.png" alt="Изображение дивана “F-41”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван флоковый “F-41”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">17 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,5</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/r85320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofar85.png" alt="Изображение дивана “R-85”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван велюровый “R-85”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">34 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,5</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/s44320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofas44.png" alt="Изображение дивана “S-44”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван велюровый “S-44”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">19 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+            <article data-tab="second" data-tab-mobile="third"
+              class="catalog-card catalog-card--display catalog-card--display-mobile">
+              <div class="catalog-card__rating">4,5</div>
+              <div class="catalog-card__img-container">
+                <picture>
+                  <source srcset="image/main/c80320.png" media="(max-width:752px)" />
+                  <img src="image/main/sofac80.png" alt="Изображение дивана “С-80”" />
+                </picture>
+              </div>
+              <div class="catalog-card__content-container">
+                <h3 class="h-reset">
+                  <a href="#" class="catalog-card__title">
+                    Диван из шинила “С-80”
+                  </a>
+                </h3>
+                <div class="catalog-card__price">20 990 руб</div>
+                <button class="catalog-card__btn button-default">
+                  Купить
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="content__btn-container">
+            <button data-tabbtn="1" class="content__btn content__btn--active button-default">
+              1
+            </button>
+            <button data-tabbtn="2" class="content__btn button-default">
+              2
+            </button>
+            <button data-tabbtn="3" class="content__btn button-default content__btn--mobile">
+              3
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <img class="footer__logo" src="image/main/footer.svg" alt="SitDownPls - логотип " />
+        <ul class="footer__social-list list-reset">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="Ссылка на facebook магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#fb "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="ССылка на instagram магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#vk "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="ССылка на группу в ВКонтакте магазина">
+              <svg class="footer__social-svg-container">
+                <use class="footer__social-svg-use" xlink:href="svg/sprite.svg#instagram "></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <nav class="footer__nav">
+          <div class="footer-nav__container footer-nav__container--about">
+            <h3 class="footer-nav__title h-reset">О нас</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">О компании</a></li>
+              <li class="footer-nav__item"><a href="#">Блог</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--services">
+            <h3 class="footer-nav__title h-reset">Услуги</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">Доставка</a></li>
+              <li class="footer-nav__item">
+                <a href="#">Рассрочка и кредит</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#">Сборка и установка</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--contact">
+            <h3 class="footer-nav__title h-reset">Связь с нами</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item"><a href="#">Обратная связь</a></li>
+              <li class="footer-nav__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container footer-nav__container--cooperating">
+            <h3 class="footer-nav__title h-reset">Сотрудничество</h3>
+            <ul class="footer-nav__list list-reset">
+              <li class="footer-nav__item">
+                <a href="cooperation.html">Поставщикам</a>
+              </li>
+              <li class="footer-nav__item"><a href="#">Оптовикам</a></li>
+              <li class="footer-nav__item"><a href="#">Карьера</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer__copyright">SDP® 2011-2023</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

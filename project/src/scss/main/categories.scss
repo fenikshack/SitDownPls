@@ -1,0 +1,271 @@
+.categories {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  &__title {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-areas: "sofa sofa armchair armchair" "bed dresser dresser chair ";
+    gap: 32px;
+    grid-template-columns: 2.2fr 1fr 1fr 2.2fr;
+  }
+}
+
+.categories-card {
+  padding: 30px 0 27px 0;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  &--sofa {
+    grid-area: sofa;
+  }
+  &--armchair {
+    grid-area: armchair;
+  }
+  &--bed {
+    grid-area: bed;
+    max-width: 405px;
+  }
+  &--dresser {
+    grid-area: dresser;
+    max-width: 405px;
+  }
+  &--chair {
+    grid-area: chair;
+    max-width: 405px;
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 14px;
+    padding-left: 30px;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #999999;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__img {
+    display: block;
+    margin-bottom: 27px;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    left: 30px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #a65cf0;
+    padding: 2px 0;
+    transition: color 0.15s ease-in-out;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      color: #7033ac;
+    }
+  }
+  &__svg-container {
+    position: absolute;
+    top: 1px;
+    right: -27px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 5px;
+    transition: background-color 0.15s ease-in-out;
+    border: 2px solid #a65cf0;
+    border-radius: 100%;
+  }
+  &__svg-use {
+    width: 5px;
+    height: 7px;
+    fill: none;
+    stroke: #a65cf0;
+    stroke-width: 2px;
+    transition: stroke 0.15s ease-in-out;
+  }
+}
+
+.categories-card__link span {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.categories-card__link:hover span {
+  border-color: #a65cf0;
+}
+
+.categories-card__link:focus span {
+  border-color: #a65cf0;
+}
+
+.categories-card__link:active span {
+  border-color: #7033ac;
+}
+
+.categories-card__link:hover .categories-card__svg-container {
+  background-color: #a65cf0;
+}
+
+.categories-card__link:active .categories-card__svg-container {
+  background-color: #7033ac;
+}
+
+.categories-card__link:focus .categories-card__svg-container {
+  background-color: #c998fb;
+}
+
+.categories-card__link:hover .categories-card__svg-use {
+  stroke: white;
+}
+
+.categories-card__link:active .categories-card__svg-use {
+  stroke: white;
+}
+
+.categories-card__link:focus .categories-card__svg-use {
+  stroke: white;
+}
+
+@media (max-width: 1024px) {
+  .categories {
+    padding-bottom: 70px;
+    &__grid {
+      grid-template-areas: "sofa sofa bed " "dresser armchair  chair ";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .categories-card {
+    &__title {
+      margin-bottom: 30px;
+      &--small {
+        margin-bottom: 36px;
+      }
+    }
+    &__link--small {
+      padding-top: 36px;
+    }
+    &__svg-container--small {
+      top: 34px;
+    }
+    &__img--small {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 907px) {
+  .categories {
+    padding-bottom: 69px;
+    &__grid {
+      grid-template-areas: "sofa sofa" "bed armchair " "dresser   chair ";
+      grid-template-columns: 1fr 1fr;
+    }
+    &-card__title--mobile {
+      margin-bottom: 396px;
+    }
+  }
+}
+
+@media (max-width: 707px) {
+  .categories {
+    padding-bottom: 75px;
+    padding-top: 164px;
+    &__grid {
+      gap: 32px 16px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  .categories-card {
+    padding: 15px 0 16px 0;
+    &__svg-container {
+      right: -3px;
+    }
+    &--sofa {
+      padding-bottom: 14px;
+      padding-top: 30px;
+    }
+    &__list {
+      padding-left: 16px;
+      margin-bottom: 9px;
+      flex-direction: column;
+      &--big {
+        padding-left: 30px;
+        margin-bottom: 14px;
+        flex-direction: unset;
+      }
+    }
+    &__item {
+      font-size: 10px;
+      line-height: 10px;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 4px;
+      }
+      &--big {
+        font-size: 14px;
+        line-height: 14px;
+        &:not(:last-child) {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__title {
+      display: inline-block;
+      margin-bottom: 0;
+      max-width: 300px;
+      margin-right: 6px;
+      &--small {
+        max-width: 92px;
+        padding-left: 16px;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 0;
+      }
+    }
+    &__container {
+      display: flex;
+      margin-bottom: 15px;
+      &--big {
+        margin-bottom: 12px;
+      }
+    }
+    &__link {
+      align-self: flex-end;
+      padding: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
+    &__svg-container {
+      top: -3px;
+      left: 0;
+    }
+    &__img {
+      margin-bottom: 0;
+    }
+  }
+}

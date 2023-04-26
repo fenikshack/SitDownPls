@@ -1,0 +1,178 @@
+.useful {
+  position: relative;
+  &__title {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__swiper {
+    &-button {
+      &-svg-container {
+        width: 10px;
+        height: 12px;
+      }
+      &-svg-use {
+        fill: none;
+        stroke: #a65cf0;
+        stroke-width: 2px;
+      }
+      &-prev {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin-right: 10px;
+        border-radius: 100%;
+        border: 2px solid #a65cf0;
+        transition: background-color 0.15s ease-in-out;
+        &:hover {
+          background-color: #a65cf0;
+        }
+        &:active {
+          background-color: #7033ac;
+        }
+        &:focus {
+          outline: none;
+          background-color: #c998fb;
+        }
+      }
+      &-next {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 100%;
+        border: 2px solid #a65cf0;
+        transition: background-color 0.15s ease-in-out;
+        &:hover {
+          background-color: #a65cf0;
+        }
+        &:active {
+          background-color: #7033ac;
+        }
+        &:focus {
+          outline: none;
+          background-color: #c998fb;
+        }
+      }
+    }
+    &-slide {
+      height: unset;
+    }
+  }
+}
+
+.article-card {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  padding-bottom: 121px;
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    max-width: 572px;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+  &__btn {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #a65cf0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    border: 2px solid #a65cf0;
+    border-radius: 10px;
+    padding: 17px 32px;
+    transition-property: color, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.15s;
+    &:hover {
+      color: white;
+      background-color: #a65cf0;
+    }
+    &:focus {
+      color: white;
+      background-color: #c998fb;
+    }
+    &:active {
+      color: white;
+      background-color: #7033ac;
+    }
+  }
+}
+
+.useful__swiper-button-prev:hover .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+.useful__swiper-button-prev:active .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+.useful__swiper-button-prev:focus .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+.useful__swiper-button-next:hover .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+.useful__swiper-button-next:active .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+.useful__swiper-button-next:focus .useful__swiper-button-svg-use {
+  stroke: white;
+}
+
+@media (max-width: 1024px) {
+  .useful {
+    &__swiper {
+      &-container {
+        height: 456px;
+      }
+    }
+  }
+  .article-card {
+    &__title {
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 229px;
+    }
+    &__img {
+      margin-bottom: 33px;
+    }
+  }
+}
+
+@media (max-width: 584px) {
+  .useful {
+    padding-bottom: 48px;
+    position: relative;
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      margin-right: 0;
+    }
+    &__swiper {
+      &-container {
+        width: 295px;
+      }
+      &-nav-container {
+        position: absolute;
+        top: 522px;
+        left: 38%;
+      }
+    }
+  }
+}

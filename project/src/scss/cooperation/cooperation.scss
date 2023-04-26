@@ -1,0 +1,167 @@
+.information {
+  padding-bottom: 68px;
+  &__container {
+    max-width: 842px;
+  }
+}
+
+.information__container > h2 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.information__container > div {
+  margin-bottom: 33px;
+}
+
+.information__container > div:last-child {
+  padding: 22px 0 22px 109px;
+  max-width: 624px;
+  background-image: url("/image/cooperation/pen1920.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.information__container > div > h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.information__container > div:last-child > h3 {
+  line-height: 36px;
+  margin-bottom: 0;
+}
+
+.information__container > div > p {
+  font-size: 16px;
+  line-height: 29px;
+  color: #666666;
+  font-weight: 400;
+}
+
+.information__container > div > ul > li {
+  color: #666666;
+  font-weight: 400;
+  max-width: 620px;
+  line-height: 24px;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 0;
+  padding-left: 35px;
+}
+
+.information__container > div > p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.information__container > div > ul > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.information__container > div > ul > li:nth-child(1) {
+  background-image: url("/image/cooperation/net.svg");
+}
+
+.information__container > div > ul > li:nth-child(2) {
+  background-image: url("/image/cooperation/case.svg");
+}
+
+.information__container > div > ul > li:nth-child(3) {
+  background-image: url("/image/cooperation/git.svg");
+}
+
+.information__container > div > span {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #ff862f;
+  margin-bottom: 14px;
+}
+
+.information__container > div > ol > li {
+  font-size: 16px;
+  line-height: 29px;
+  color: #666666;
+  font-weight: 400;
+  position: relative;
+  padding-left: 26px;
+  max-width: 839px;
+}
+
+.information__container > div > ol > li::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ff862f;
+}
+
+.information__container > div > ol > li:nth-child(1)::after {
+  content: "1";
+}
+
+.information__container > div > ol > li:nth-child(2)::after {
+  content: "2";
+}
+
+.information__container > div > ol > li:nth-child(3)::after {
+  content: "3";
+}
+
+@media (max-width: 500px) {
+  .information {
+    padding-top: 32px;
+    padding-bottom: 70px;
+  }
+  .cooperation__hierarchy {
+    display: none;
+  }
+  .information__container > h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  .information__container > div {
+    margin-bottom: 32px;
+  }
+  .information__container > div > h3 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .information__container > div:last-child > h3 {
+    line-height: 24px;
+    max-width: 185px;
+    margin-bottom: 0;
+  }
+  .information__container > div:nth-child(4) > h3 {
+    font-size: 14px;
+  }
+  .information__container > div > p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .information__container > div > ul > li {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .information__container > div > span {
+    margin-bottom: 13px;
+  }
+  .information__container > div:last-child {
+    padding: 0;
+    padding-left: 52px;
+    background-image: url("/image/cooperation/pen320.png");
+    background-position: 0 9px;
+  }
+  .information__container > div > ol > li::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ff862f;
+  }
+}
